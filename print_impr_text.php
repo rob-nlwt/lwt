@@ -43,8 +43,10 @@ require_once( 'dbutils.inc.php' );
 require_once( 'utilities.inc.php' );
 
 $textid = getreq('text')+0;
-$editmode = getreq('edit')+0;
-$delmode = getreq('del')+0;
+$editmode = getreq('edit');
+$editmode = ($editmode == '' ? 0 : ($editmode+0));
+$delmode = getreq('del');
+$delmode = ($delmode == '' ? 0 : ($delmode+0));
 $ann = get_first_value("select TxAnnotatedText as value from " . $tbpref . "texts where TxID = " . $textid);
 $ann_exists = (strlen($ann) > 0);
 if ($ann_exists) {

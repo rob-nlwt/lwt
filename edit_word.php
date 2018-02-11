@@ -304,8 +304,8 @@ else {  // if (! isset($_REQUEST['op']))
 			<input type="hidden" name="WoID" value="<?php echo $wid; ?>" />
 			<input type="hidden" name="WoOldStatus" value="<?php echo $record['WoStatus']; ?>" />
 			<input type="hidden" name="WoTextLC" value="<?php echo tohtml($termlc); ?>" />
-			<input type="hidden" name="tid" value="<?php echo $_REQUEST['tid']; ?>" />
-			<input type="hidden" name="ord" value="<?php echo $_REQUEST['ord']; ?>" />
+			<input type="hidden" name="tid" value="<?php echo getreq('tid'); ?>" />
+			<input type="hidden" name="ord" value="<?php echo getreq('ord'); ?>" />
 			<table class="tab2" cellspacing="0" cellpadding="5">
 			<tr title="Only change uppercase/lowercase!">
 			<td class="td1 right"><b>Edit Term:</b></td>
