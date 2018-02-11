@@ -81,9 +81,12 @@ function changeImprAnnText() {
 	var textid = $('#editimprtextdata').attr('data_id');
 	$(this).prev('input:radio').attr('checked', 'checked');
 	var elem = $(this).attr('name');
+	var idwait = '#wait' + elem.substring(2);
+	$(idwait).html('<img src="icn/waiting2.gif" />');
 	var thedata = JSON.stringify($('form').serializeObject());
 	$.post('ajax_save_impr_text.php', { id: textid, elem: elem, data : thedata }
 		, function(d) { 
+				$(idwait).html('');
 				if(d != 'OK') 
 					alert('Saving your changes failed, please reload page and try again!'); 
 			} 
@@ -93,9 +96,12 @@ function changeImprAnnText() {
 function changeImprAnnRadio() {
 	var textid = $('#editimprtextdata').attr('data_id');
 	var elem = $(this).attr('name');
+	var idwait = '#wait' + elem.substring(2);
+	$(idwait).html('<img src="icn/waiting2.gif" />');
 	var thedata = JSON.stringify($('form').serializeObject());
 	$.post('ajax_save_impr_text.php', { id: textid, elem: elem, data : thedata }
 		, function(d) { 
+				$(idwait).html('');
 				if(d != 'OK') 
 					alert('Saving your changes failed, please reload page and try again!'); 
 			} 
