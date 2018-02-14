@@ -237,7 +237,7 @@ if (isset($_REQUEST['new'])) {
 	</tr>
 	<tr>
 	<td class="td1 right backlightyellow">Dictionary 1 URI:</td>
-	<td class="td1"><input type="text" class="checkdicturl notempty" name="LgDict1URI" value="glosbe_api.php?from=••&dest=••&phrase=###" maxlength="200" size="60" data_info="Dictionary 1 URI" /> <img src="icn/status-busy.png" title="Field must not be empty" alt="Field must not be empty" /></td>
+	<td class="td1"><input type="text" class="checkdicturl notempty" name="LgDict1URI" value="" maxlength="200" size="60" data_info="Dictionary 1 URI" /> <img src="icn/status-busy.png" title="Field must not be empty" alt="Field must not be empty" /></td>
 	</tr>
 	<tr>
 	<td class="td1 right">Dictionary 2 URI:</td>
