@@ -166,10 +166,11 @@ else {  // Print Mode
 			if ($trans == '*') $trans = $vals[1];
 			echo ' <ruby><rb><span class="anntermruby">' . tohtml($vals[1]) . '</span></rb><rt><span class="anntransruby2">' . tohtml($trans) . '</span></rt></ruby> ';
 		} else {
-			echo str_replace(
-			"¶",
-			'</p><p style="font-size:' . $textsize . '%;line-height: 1.3; margin-bottom: 10px;">',
-			" " . tohtml($vals[1]) . " ");
+			if (count($vals) >= 2) 
+				echo str_replace(
+				"¶",
+				'</p><p style="font-size:' . $textsize . '%;line-height: 1.3; margin-bottom: 10px;">',
+				" " . tohtml($vals[1]) . " ");
 		}
 	}
 	
