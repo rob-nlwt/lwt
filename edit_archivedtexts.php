@@ -230,12 +230,12 @@ if (isset($_REQUEST['chg'])) {
 		</tr>
 		<tr>
 		<td class="td1 right">Title:</td>
-		<td class="td1"><input type="text" class="notempty" name="AtTitle" value="<?php echo tohtml($record['AtTitle']); ?>" maxlength="200" size="60" /> <img src="icn/status-busy.png" title="Field must not be empty" alt="Field must not be empty" /></td>
+		<td class="td1"><input type="text" class="notempty checkoutsidebmp" data_info="Title" name="AtTitle" value="<?php echo tohtml($record['AtTitle']); ?>" maxlength="200" size="60" /> <img src="icn/status-busy.png" title="Field must not be empty" alt="Field must not be empty" /></td>
 		</tr>
 		<tr>
 		<td class="td1 right">Text:</td>
 		<td class="td1">
-		<textarea name="AtText" class="notempty checkbytes" data_maxlength="65000" data_info="Text" cols="60" rows="20"><?php echo tohtml($record['AtText']); ?></textarea> <img src="icn/status-busy.png" title="Field must not be empty" alt="Field must not be empty" />
+		<textarea name="AtText" class="notempty checkbytes checkoutsidebmp" data_maxlength="65000" data_info="Text" cols="60" rows="20"><?php echo tohtml($record['AtText']); ?></textarea> <img src="icn/status-busy.png" title="Field must not be empty" alt="Field must not be empty" />
 		</td>
 		</tr>
 		<tr>

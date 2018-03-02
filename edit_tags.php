@@ -146,7 +146,7 @@ if (isset($_REQUEST['new'])) {
 	</tr>
 	<tr>
 	<td class="td1 right">Comment:</td>
-	<td class="td1"><textarea class="textarea-noreturn checklength" data_maxlength="200" data_info="Comment" name="TgComment" cols="40" rows="3"></textarea></td>
+	<td class="td1"><textarea class="textarea-noreturn checklength checkoutsidebmp" data_maxlength="200" data_info="Comment" name="TgComment" cols="40" rows="3"></textarea></td>
 	</tr>
 	<tr>
 	<td class="td1 right" colspan="2">
@@ -179,7 +179,7 @@ elseif (isset($_REQUEST['chg'])) {
 		</tr>
 		<tr>
 		<td class="td1 right">Comment:</td>
-		<td class="td1"><textarea class="textarea-noreturn checklength" data_maxlength="200" data_info="Comment" name="TgComment" cols="40" rows="3"><?php echo tohtml($record['TgComment']); ?></textarea></td>
+		<td class="td1"><textarea class="textarea-noreturn checklength checkoutsidebmp" data_maxlength="200" data_info="Comment" name="TgComment" cols="40" rows="3"><?php echo tohtml($record['TgComment']); ?></textarea></td>
 		</tr>
 		<tr>
 		<td class="td1 right" colspan="2">

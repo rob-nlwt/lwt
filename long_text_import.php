@@ -220,7 +220,7 @@ if (isset($_REQUEST['op'])) {
 	</tr>
 	<tr>
 	<td class="td1 right">Title:</td>
-	<td class="td1"><input type="text" class="notempty" name="TxTitle" value="" maxlength="200" size="60" /> <img src="icn/status-busy.png" title="Field must not be empty" alt="Field must not be empty" /></td>
+	<td class="td1"><input type="text" class="notempty checkoutsidebmp" data_info="Title" name="TxTitle" value="" maxlength="200" size="60" /> <img src="icn/status-busy.png" title="Field must not be empty" alt="Field must not be empty" /></td>
 	</tr>
 	<tr>
 	<td class="td1 right">

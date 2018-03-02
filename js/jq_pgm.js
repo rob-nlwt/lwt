@@ -56,6 +56,10 @@ function setTransRoman(tra, rom) {
 	makeDirty();
 }
 
+function containsCharacterOutsideBasicMultilingualPlane(s) {
+    return /[\uD800-\uDFFF]/.test(s);
+}
+
 function getUTF8Length(s) {
 	return (new Blob([String(s)]).size);
 }
@@ -165,9 +169,23 @@ function check() {
 			}
 		}
 	} );
+	$('input.checkoutsidebmp').each( function(n) {
+		if ($(this).val().trim().length > 0) {
+			if (containsCharacterOutsideBasicMultilingualPlane($(this).val())) {
+				alert('ERROR\n\nField "' + $(this).attr('data_info') + '" contains invalid characters (in the Unicode Supplementary Multilingual Planes, > U+FFFF); like emojis or very rare characters. Details see https://en.wikipedia.org/wiki/Plane_(Unicode)\n\nPlease remove these characters and try again.');
+				count++;
+			}
+		}
+	} );
 	$('textarea.checklength').each( function(n) {
 		if($(this).val().trim().length > (0 + $(this).attr('data_maxlength'))) {
 			alert('ERROR\n\nText is too long in field "' + $(this).attr('data_info') + '", please make it shorter! (Maximum length: ' + $(this).attr('data_maxlength') + ' char.)');
+			count++;
+		}
+	} );
+	$('textarea.checkoutsidebmp').each( function(n) {
+		if(containsCharacterOutsideBasicMultilingualPlane($(this).val())) {
+			alert('ERROR\n\nText contains invalid characters (in the Unicode Supplementary Multilingual Planes, > U+FFFF); like emojis or very rare characters. Details see https://en.wikipedia.org/wiki/Plane_(Unicode)\n\nPlease remove these characters and try again.');
 			count++;
 		}
 	} );
