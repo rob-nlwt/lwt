@@ -62,8 +62,10 @@ if (isset($_REQUEST['op'])) {
 		if ( isset($_FILES["thefile"]) && $_FILES["thefile"]["tmp_name"] != "" && $_FILES["thefile"]["error"] == 0 ) {
 			$data = file_get_contents($_FILES["thefile"]["tmp_name"]);
 			$data = str_replace("\r\n","\n",$data);
+			$data = replace_supp_unicode_planes_char($data);
 		} else {
-			$data = prepare_textdata($_REQUEST["Upload"]);
+			$data = replace_supp_unicode_planes_char(
+				prepare_textdata($_REQUEST["Upload"]));
 		}
 		$data = trim($data);
 		

@@ -889,6 +889,13 @@ function adjust_autoincr($table,$key) {
 
 // -------------------------------------------------------------
 
+function replace_supp_unicode_planes_char($s) {
+	return preg_replace('/[\x{10000}-\x{10FFFF}]/u', "\xE2\x96\x88", $s); 
+	/* U+2588 = UTF8: E2 96 88 = FULL BLOCK = ⬛︎  */ 
+}
+
+// -------------------------------------------------------------
+
 function prepare_textdata($s) {
 	return str_replace("\r\n","\n", stripTheSlashesIfNeeded($s));
 }
@@ -896,7 +903,6 @@ function prepare_textdata($s) {
 // -------------------------------------------------------------
 
 function prepare_textdata_js($s) {
-	$s = convert_string_to_sqlsyntax($s);
 	if($s == "NULL") return "''";
 	return str_replace("''", "\\'", $s);
 }
