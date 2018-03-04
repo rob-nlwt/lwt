@@ -903,6 +903,7 @@ function prepare_textdata($s) {
 // -------------------------------------------------------------
 
 function prepare_textdata_js($s) {
+	$s = convert_string_to_sqlsyntax($s);
 	if($s == "NULL") return "''";
 	return str_replace("''", "\\'", $s);
 }
