@@ -57,7 +57,17 @@ function setTransRoman(tra, rom) {
 }
 
 function containsCharacterOutsideBasicMultilingualPlane(s) {
-    return /[\uD800-\uDFFF]/.test(s);
+  return /[\uD800-\uDFFF]/.test(s);
+}
+
+function alertFirstCharacterOutsideBasicMultilingualPlane(s,info) {
+	var match = /[\uD800-\uDFFF]/.exec(s);
+	if (match) {
+		alert('ERROR\n\nText "' + info + '" contains invalid character(s) (in the Unicode Supplementary Multilingual Planes, > U+FFFF) like emojis or very rare characters.\n\nFirst invalid character: "' + s.substring(match.index, match.index+2) + '" at position ' + (match.index+1) + '.\n\nMore info: https://en.wikipedia.org/wiki/Plane_(Unicode)\n\nPlease remove this/these character(s) and try again.');
+    return 1;
+	} else {
+		return 0;
+	}
 }
 
 function getUTF8Length(s) {
@@ -172,8 +182,7 @@ function check() {
 	$('input.checkoutsidebmp').each( function(n) {
 		if ($(this).val().trim().length > 0) {
 			if (containsCharacterOutsideBasicMultilingualPlane($(this).val())) {
-				alert('ERROR\n\nField "' + $(this).attr('data_info') + '" contains invalid characters (in the Unicode Supplementary Multilingual Planes, > U+FFFF); like emojis or very rare characters. Details see https://en.wikipedia.org/wiki/Plane_(Unicode)\n\nPlease remove these characters and try again.');
-				count++;
+				count += alertFirstCharacterOutsideBasicMultilingualPlane($(this).val(), $(this).attr('data_info'));
 			}
 		}
 	} );
@@ -185,8 +194,7 @@ function check() {
 	} );
 	$('textarea.checkoutsidebmp').each( function(n) {
 		if(containsCharacterOutsideBasicMultilingualPlane($(this).val())) {
-			alert('ERROR\n\nText contains invalid characters (in the Unicode Supplementary Multilingual Planes, > U+FFFF); like emojis or very rare characters. Details see https://en.wikipedia.org/wiki/Plane_(Unicode)\n\nPlease remove these characters and try again.');
-			count++;
+			count += alertFirstCharacterOutsideBasicMultilingualPlane($(this).val(), $(this).attr('data_info'));
 		}
 	} );
 	$('textarea.checkbytes').each( function(n) {
