@@ -628,13 +628,19 @@ $(document).ready( function() {
 	$('#showallwords').click(showallwordsClick);
 	$('textarea.textarea-noreturn').keydown(textareaKeydown);
 	$('#termtags').tagit(
-		{ 
+		{
+			beforeTagAdded: function(event, ui) {
+				return ! (containsCharacterOutsideBasicMultilingualPlane(ui.tag.text())); 
+			},
 			availableTags : TAGS, 
 			fieldName : 'TermTags[TagList][]' 
 		}
 	);
 	$('#texttags').tagit(
 		{ 
+			beforeTagAdded: function(event, ui) {
+				return ! (containsCharacterOutsideBasicMultilingualPlane(ui.tag.text())); 
+			},
 			availableTags : TEXTTAGS, 
 			fieldName : 'TextTags[TagList][]'
 		}
