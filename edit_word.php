@@ -251,7 +251,7 @@ else {  // if (! isset($_REQUEST['op']))
 		</tr>
 		<tr>
 		<td class="td1 right">Romaniz.:</td>
-		<td class="td1"><input type="text" name="WoRomanization" value="" maxlength="100" size="35" /></td>
+		<td class="td1"><input type="text" class="checkoutsidebmp" data_info="Romanization" name="WoRomanization" value="" maxlength="100" size="35" /></td>
 		</tr>
 		<tr>
 		<td class="td1 right">Sentence<br />Term in {...}:</td>
@@ -324,7 +324,7 @@ else {  // if (! isset($_REQUEST['op']))
 			</tr>
 			<tr>
 			<td class="td1 right">Romaniz.:</td>
-			<td class="td1"><input type="text" name="WoRomanization" maxlength="100" size="35" 
+			<td class="td1"><input type="text" class="checkoutsidebmp" data_info="Romanization" name="WoRomanization" maxlength="100" size="35" 
 			value="<?php echo tohtml($record['WoRomanization']); ?>" /></td>
 			</tr>
 			<tr>

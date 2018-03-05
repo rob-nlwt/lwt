@@ -232,7 +232,7 @@ if (isset($_REQUEST['op'])) {
 	Either specify a <b>File to upload</b>:<br />
 	<input name="thefile" type="file" /><br /><br />
 	<b>Or</b> paste a text from the clipboard (and do <b>NOT</b> specify file):<br />
-	<textarea name="Upload" cols="60" rows="15"></textarea>
+	<textarea class="checkoutsidebmp" data_info="Upload" name="Upload" cols="60" rows="15"></textarea>
 	
 	<p class="smallgray">
 	If the text is too long, the import may not be possible.<br />
@@ -258,7 +258,7 @@ if (isset($_REQUEST['op'])) {
 	</tr>
 	<tr>
 	<td class="td1 right">Source URI:</td>
-	<td class="td1"><input type="text" class="checkurl" data_info="Source URI" name="TxSourceURI" value="" maxlength="1000" size="60" /></td>
+	<td class="td1"><input type="text" class="checkurl checkoutsidebmp" data_info="Source URI" name="TxSourceURI" value="" maxlength="1000" size="60" /></td>
 	</tr>
 	<tr>
 	<td class="td1 right">Tags:</td>

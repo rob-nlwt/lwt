@@ -269,7 +269,7 @@ make_score_random_insert_update('id') . ')',"Imported");
 	Either specify a <b>File to upload</b>:<br />
 	<input name="thefile" type="file" /><br /><br />
 	<b>Or</b> type in or paste from clipboard (do <b>NOT</b> specify file):<br />
-	<textarea name="Upload" cols="60" rows="25"></textarea>
+	<textarea class="checkoutsidebmp" data_info="Upload" name="Upload" cols="60" rows="25"></textarea>
 	</td>
 	</tr>
 	<tr>

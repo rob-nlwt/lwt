@@ -400,7 +400,7 @@ if (isset($_REQUEST['new']) && isset($_REQUEST['lang'])) {
 	</tr>
 	<tr>
 	<td class="td1 right">Romaniz.:</td>
-	<td class="td1"><input type="text" name="WoRomanization" value="" maxlength="100" size="40" /></td>
+	<td class="td1"><input type="text" class="checkoutsidebmp" data_info="Romanization" name="WoRomanization" value="" maxlength="100" size="40" /></td>
 	</tr>
 	<tr>
 	<td class="td1 right">Sentence<br />Term in {...}:</td>
@@ -469,7 +469,7 @@ elseif (isset($_REQUEST['chg'])) {
 		</tr>
 		<tr>
 		<td class="td1 right">Romaniz.:</td>
-		<td class="td1"><input type="text" name="WoRomanization" maxlength="100" size="40" 
+		<td class="td1"><input type="text" class="checkoutsidebmp" data_info="Romanization" name="WoRomanization" maxlength="100" size="40" 
 		value="<?php echo tohtml($record['WoRomanization']); ?>" /></td>
 		</tr>
 		<tr>

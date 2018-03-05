@@ -338,7 +338,7 @@ if (isset($_REQUEST['new'])) {
 	</tr>
 	<tr>
 	<td class="td1 right">Source URI:</td>
-	<td class="td1"><input type="text" class="checkurl" data_info="Source URI" name="TxSourceURI" value="" maxlength="1000" size="60" /></td>
+	<td class="td1"><input type="text" class="checkurl checkoutsidebmp" data_info="Source URI" name="TxSourceURI" value="" maxlength="1000" size="60" /></td>
 	</tr>
 	<tr>
 	<td class="td1 right">Tags:</td>
@@ -348,7 +348,7 @@ if (isset($_REQUEST['new'])) {
 	</tr>
 	<tr>
 	<td class="td1 right">Audio-URI:</td>
-	<td class="td1"><input type="text" name="TxAudioURI" value="" maxlength="200" size="60" />		
+	<td class="td1"><input type="text" class="checkoutsidebmp" data_info="Audio-URI" name="TxAudioURI" value="" maxlength="200" size="60" />		
 	<span id="mediaselect"><?php echo selectmediapath('TxAudioURI'); ?></span>		
 	</td>
 	</tr>
@@ -413,7 +413,7 @@ elseif (isset($_REQUEST['chg'])) {
 		</tr>
 		<tr>
 		<td class="td1 right">Source URI:</td>
-		<td class="td1"><input type="text" class="checkurl" data_info="Source URI" name="TxSourceURI" value="<?php echo tohtml($record['TxSourceURI']); ?>" maxlength="1000" size="60" /></td>
+		<td class="td1"><input type="text" class="checkurl checkoutsidebmp" data_info="Source URI" name="TxSourceURI" value="<?php echo tohtml($record['TxSourceURI']); ?>" maxlength="1000" size="60" /></td>
 		</tr>
 		<tr>
 		<td class="td1 right">Tags:</td>
@@ -423,7 +423,7 @@ elseif (isset($_REQUEST['chg'])) {
 		</tr>
 		<tr>
 		<td class="td1 right">Audio-URI:</td>
-		<td class="td1"><input type="text" name="TxAudioURI" value="<?php echo tohtml($record['TxAudioURI']); ?>" maxlength="200" size="60" /> 
+		<td class="td1"><input type="text" class="checkoutsidebmp" data_info="Audio-URI" name="TxAudioURI" value="<?php echo tohtml($record['TxAudioURI']); ?>" maxlength="200" size="60" /> 
 		<span id="mediaselect"><?php echo selectmediapath('TxAudioURI'); ?></span>		
 		</td>
 		</tr>

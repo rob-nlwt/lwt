@@ -246,7 +246,7 @@ if (isset($_REQUEST['chg'])) {
 		</tr>
 		<tr>
 		<td class="td1 right">Source URI:</td>
-		<td class="td1"><input type="text" class="checkurl" data_info="Source URI" name="AtSourceURI" value="<?php echo tohtml($record['AtSourceURI']); ?>" maxlength="1000" size="60" /></td>
+		<td class="td1"><input type="text" class="checkurl checkoutsidebmp" data_info="Source URI" name="AtSourceURI" value="<?php echo tohtml($record['AtSourceURI']); ?>" maxlength="1000" size="60" /></td>
 		</tr>
 		<tr>
 		<td class="td1 right">Tags:</td>
@@ -256,7 +256,7 @@ if (isset($_REQUEST['chg'])) {
 		</tr>
 		<tr>
 		<td class="td1 right">Audio-URI:</td>
-		<td class="td1"><input type="text" name="AtAudioURI" value="<?php echo tohtml($record['AtAudioURI']); ?>" maxlength="200" size="60" />
+		<td class="td1"><input type="text" class="checkoutsidebmp" data_info="Audio-URI" name="AtAudioURI" value="<?php echo tohtml($record['AtAudioURI']); ?>" maxlength="200" size="60" />
 		<span id="mediaselect"><?php echo selectmediapath('AtAudioURI'); ?></span>		
 		</td>
 		</tr>
