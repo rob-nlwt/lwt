@@ -123,7 +123,7 @@ foreach ($items as $item) {
 			}
 		}
 		if ($c > 3) $trans = $vals[3];
-		if ($trans == '*') $trans = $vals[1];
+		if ($trans == '*') $trans = $vals[1] . " "; // <- U+200A HAIR SPACE
 		echo ' <ruby><rb><span class="click anntermruby" style="color:black;"' . ($rom == '' ? '' : (' title="' . tohtml($rom) . '"')) . '>' . tohtml($vals[1]) . '</span></rb><rt><span class="click anntransruby2">' . tohtml($trans) . '</span></rt></ruby> ';
 	} else {
 		if (count($vals) >= 2) 

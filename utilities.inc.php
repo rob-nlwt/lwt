@@ -2932,9 +2932,8 @@ function makeAudioPlayer($audio) {
 ?>
 <link type="text/css" href="css/jplayer_skin/<?php echo $playerskin; ?>.css" rel="stylesheet" />
 <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-<table class="width99pc" cellspacing="0" cellpadding="3">
+<table align="center" style="margin-top:5px;" cellspacing="0" cellpadding="0">
 <tr>
-<td class="width45pc">&nbsp;</td>
 <td class="center borderleft" style="padding-left:10px;">
 <span id="do-single" class="click<?php echo ($repeatMode ? '' : ' hide'); ?>"><img src="icn/arrow-repeat.png" alt="Toggle Repeat (Now ON)" title="Toogle Repeat (Now ON)" style="width:24px;height:24px;" /></span><span id="do-repeat" class="click<?php echo ($repeatMode ? ' hide' : ''); ?>"><img src="icn/arrow-norepeat.png" alt="Toggle Repeat (Now OFF)" title="Toggle Repeat (Now OFF)" style="width:24px;height:24px;" /></span>
 </td>
@@ -2987,7 +2986,6 @@ if($currentplaybackrate == '') $currentplaybackrate = 10;
 <select id="playbackrate" name="playbackrate"><?php echo get_playbackrate_selectoptions($currentplaybackrate); ?></select><br />
 <span id="slower" class="click"><img src="icn/minus.png" alt="Slower" title="Slower" style="margin-top:3px" /></span>&nbsp;<span id="stdspeed" class="click"><img src="icn/status-away.png" alt="Normal" title="Normal" style="margin-top:3px" /></span>&nbsp;<span id="faster" class="click"><img src="icn/plus.png" alt="Faster" title="Faster" style="margin-top:3px" /></span>
 </td>
-<td class="width45pc">&nbsp;</td>
 </tr>
 <script type="text/javascript">
 //<![CDATA[

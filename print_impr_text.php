@@ -163,7 +163,7 @@ else {  // Print Mode
 		if ($vals[0] > -1) {
 			$trans = '';
 			if (count($vals) > 3) $trans = $vals[3];
-			if ($trans == '*') $trans = $vals[1];
+			if ($trans == '*') $trans = $vals[1] . " "; // <- U+200A HAIR SPACE
 			echo ' <ruby><rb><span class="anntermruby">' . tohtml($vals[1]) . '</span></rb><rt><span class="anntransruby2">' . tohtml($trans) . '</span></rt></ruby> ';
 		} else {
 			if (count($vals) >= 2) 
