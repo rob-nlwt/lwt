@@ -1680,10 +1680,13 @@ $(document).ready( function() {
             <br />
           </li>
 
-          <li>I have installed or updated LWT on OS X or Linux, but the application does not run as expected:
+          <li>I have installed or updated LWT on Linux, but the application does not run as expected:
             <br />
             <br />
-            Answer: The Webserver does seem to have full access to all files (insufficient rights). Open a terminal window, go to the directory where the directory "lwt" has been created with all LWT files, e. g. <br /><b>cd /var/www/html</b><br />Now execute:<br /><b>sudo chmod -R 755 lwt</b><br />and everything should now work as expected.
+            Answer 1: The Webserver does not have full access to all LWT files (insufficient rights). Open a terminal window, go to the directory where the directory "lwt" has been created with all LWT files, e. g. <br /><b>cd /var/www/html</b><br />Now execute:<br /><b>sudo chmod -R 755 lwt</b>.
+            <br />
+            <br />
+            Answer 2: The PHP "mbstring" extension is not installed. Please install it; <a href="https://askubuntu.com/questions/491629/how-to-install-php-mbstring-extension-in-ubuntu" target="_blank">see this article</a>.
             <br />
             <br />
           </li>
